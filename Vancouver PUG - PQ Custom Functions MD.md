@@ -11,7 +11,11 @@
 # About Me
 
 
-![[Pasted image 20260219141255.png]]
+<img width="455" height="592" alt="image" src="https://github.com/user-attachments/assets/89f64e7d-405d-471c-bbeb-9de866b68ad2" />
+<br /> 
+<br /> 
+
+
 - **Project Manager** (PMP, PMI-ACP) 
 - **Microsoft Certified Professional** (DP-600, PL-300, MCT, MCSA, MCSE, MOS Master)
 - **Romania PBI and Modern Excel UG Founder** — [https://www.meetup.com/romaniapug](https://www.meetup.com/romaniapug)
@@ -28,6 +32,10 @@
 
 
 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
 
 
 
