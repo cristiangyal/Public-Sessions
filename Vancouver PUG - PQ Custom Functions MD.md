@@ -20,7 +20,7 @@
 - **Microsoft Certified Professional** (DP-600, PL-300, MCT, MCSA, MCSE, MOS Master)
 - **Romania PBI and Modern Excel UG Founder** — [https://www.meetup.com/romaniapug](https://www.meetup.com/romaniapug)
 - **Microsoft MVP** M365 (**Excel**) & Data Platform (**Power BI**)
-- Proud dad and husband
+- **Proud dad and husband
 
 ---
 
@@ -38,9 +38,6 @@
 <br /> 
 
 
-
-
-
 ---
 
 ## Agenda 
@@ -56,6 +53,14 @@
 | 07  | Reusing Your Functions       |
 | 08  | Q&A & Wrap-Up                |
 
+          <br />
+                    <br />
+                              <br />
+                                        <br />
+                                                  <br />
+                                                            <br />
+                                                            
+          
 ---
 
 ## 01 · Why Custom Functions?
