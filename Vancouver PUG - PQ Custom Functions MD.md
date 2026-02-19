@@ -281,7 +281,7 @@ Marks a parameter the **caller can omit entirely**.
 Inside the function the omitted value arrives as `null` - pair it with `??`.
 
 ```m
-(name as text, greeting as optional text) as text =>
+(name as text, optional greeting as text) as text =>
 let
     g = greeting ?? "Hello"    // default when omitted
 in
@@ -310,7 +310,7 @@ in
     result
 
 // Typical use in a function:
-(label as optional text) =>
+(optional label as  text) =>
     let display = label ?? "N/A"
     in  display
 ```
