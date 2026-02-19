@@ -22,16 +22,14 @@
 &nbsp;
 
 # Cristian Angyal
-<img width="487" height="802" alt="image" src="https://github.com/user-attachments/assets/e913970b-71c6-4f32-9f5e-f982e1be9bbb" />
+<img width="233" height="384" alt="image" src="https://github.com/user-attachments/assets/46242c81-10d7-4ea3-b451-9610aade0d9a" />
+
 
 - **Project Manager** (PMP, PMI-ACP)
 - **Microsoft Certified Professional** (DP-600, PL-300, MCT, MCSA, MCSE, MOS Master)
 - **Romania PBI and Modern Excel UG Founder** — [https://www.meetup.com/romaniapug](https://www.meetup.com/romaniapug)
 - **Microsoft MVP** M365 (**Excel**) & Data Platform (**Power BI**)
 - **Proud dad and husband** 
-
-
----
 
 🔗 [linkedin.com/in/cristian-angyal](https://linkedin.com/in/cristian-angyal)  
 🔗 [https://linktr.ee/cristianangyal](https://linktr.ee/cristianangyal)
