@@ -121,10 +121,10 @@ in
 
 &nbsp;
   
-# Refining function definitions
+## Refining function definitions
 
-* **Defining data types:** => ensures the data remains consistent and accurate so that the function input is as expected.
-* **Adding optional parameters:** => allows users flexibility in how the function is used, addressing diverse needs without rigid constraints.
+#### Defining data types:** => ensures the data remains consistent and accurate so that the function input is as expected.
+#### Adding optional parameters:** => allows users flexibility in how the function is used, addressing diverse needs without rigid constraints.
 
 For both input parameters and function outputs, you can define data types. 
 
@@ -136,7 +136,7 @@ Specifying a data type for a parameter turns it into an **explicit parameter**. 
 
 &nbsp;
 
-### 3 Ways to Create a Custom Function
+## 3 Ways to Create a Custom Function
 
 &nbsp;
 
