@@ -53,13 +53,25 @@
 | 07  | Reusing Your Functions       |
 | 08  | Q&A & Wrap-Up                |
 
-          <br />
-                    <br />
-                              <br />
-                                        <br />
-                                                  <br />
-                                                            <br />
-                                                            
+
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+
+
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+
+
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+
+        
           
 ---
 
