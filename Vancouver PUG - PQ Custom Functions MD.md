@@ -1,4 +1,9 @@
-
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 # Getting Crafty with Power Query Custom Functions in Power BI
 
 > Build reusable, maintainable, and powerful data transformations
