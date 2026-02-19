@@ -725,6 +725,7 @@ Validate inputs and give callers a meaningful failure message.
 &nbsp;
 
 ⚡ **Avoid row-level function calls on large tables**
+
 Each `Table.AddColumn` with a custom function is called once per row. 1M rows = 1M M evaluations. Prefer built-in column operations where possible.
 
 &nbsp;
@@ -735,6 +736,7 @@ If your source supports folding (SQL Server, SharePoint…), custom M steps brea
 &nbsp;
 
 📦 **Cache expensive calls outside the function**
+
 Never call `Web.Contents()` or `File.Contents()` inside a function applied per row.
 
 ```m
@@ -750,6 +752,7 @@ WithData  = Table.AddColumn(Source, "Rate",
 &nbsp;
 
 🧪 **Develop with `Table.FirstN`**
+
 Wrap your source in `Table.FirstN(Source, 100)` while building and testing.
 
 &nbsp;
@@ -778,6 +781,7 @@ The fastest way. Works in both Power BI Desktop and Excel.
 &nbsp;
 
 ✅ Instant - no setup required
+
 ⚠️ Each copy is independent - changes to the original do not propagate
 
 &nbsp;
@@ -806,8 +810,11 @@ in
 &nbsp;
 
 ✅ Easy to share across teams and platforms
+
 ✅ Version-controllable in Git
+
 ⚠️ Manual - each recipient pastes and maintains their own copy
+
 
 &nbsp;
 
@@ -857,10 +864,15 @@ in
 &nbsp;
 
 ✅ **Single source of truth** - update the `.txt` file once, every report benefits on next refresh
+
 ✅ Works in any Power BI or Excel file that can reach the folder
+
 ✅ No SharePoint or external services needed
+
 ⚠️ Requires `Expression.Evaluate` → enable in Power BI: **File → Options → Security → Allow user-defined M functions**
+
 ⚠️ Use a shared network path so the whole team can reach the library
+
 
 &nbsp;
 
@@ -888,15 +900,29 @@ in
 
 &nbsp;
 
-1. Functions use the same `let…in` syntax as queries - nothing new to learn
-2. Always type your parameters and guard against nulls - safety first
-3. Return a **record** to produce multiple columns from a single function call
-4. `Table.AddColumn` + `each` and `List.Transform` are your core application tools
-5. Test with `Table.FirstN` during development; protect query folding in production
-6. Add `Documentation` metadata to make functions feel like built-ins
-7. **Build a `.txt` function library** - stop solving the same problem twice
+ **Functions use the same `let…in` syntax as queries - nothing new to learn**
+ &nbsp;
+ 
+ **Always type your parameters and guard against nulls - safety first**
+ &nbsp;
+ 
+ **Return a record to produce multiple columns from a single function call**
+ &nbsp;
+ 
+ **`Table.AddColumn` + `each` and `List.Transform` are your core application tools**
+ &nbsp;
+ 
+ **Test with `Table.FirstN` during development; protect query folding in production**
+ &nbsp;
+ 
+ **Add `Documentation` metadata to make functions feel like built-ins**
+ &nbsp;
+ 
+ **Build a `.txt` function library - stop solving the same problem twice**
+ &nbsp;
+ 
 
-&nbsp;
+**&nbsp;**
 
 ---
 
@@ -910,9 +936,9 @@ in
 
 Slides, code samples & further reading:
 
-- `linkedin.com/in/your-profile`
-- `github.com/your-repo`
-- `your-blog.com`
+- https://www.linkedin.com/in/cristian-angyal/
+- https://github.com/cristiangyal/Public-Sessions/tree/main
+- https://www.meetup.com/romaniapug/
 
 &nbsp;
 
