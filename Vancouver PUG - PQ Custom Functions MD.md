@@ -1,8 +1,8 @@
 
-# Getting Crafty with 
-# Power Query Custom Functions in Power BI
+# Getting Crafty with Power Query Custom Functions in Power BI
 
 > Build reusable, maintainable, and powerful data transformations
+> 
 > All levels welcome
 
 &nbsp;
@@ -12,8 +12,6 @@
 &nbsp;
 &nbsp;
        
----
-
 &nbsp;
 
 ## About me   
@@ -48,7 +46,7 @@
 | 02 | Syntax & Structure |
 | 03 | M Keywords Explained |
 | 04 | Parameters & Types |
-| 05 | Real-World Use Cases (Demos) |
+| 05 | Demos |
 | 06 | Error Handling |
 | 07 | Performance Tips |
 | 08 | Reusing Your Functions |
@@ -75,7 +73,8 @@
 
 &nbsp;
 
-✅ **Custom Functions solve all of this** - Write once, call everywhere. Self-documenting. Parameterized.
+✅ **Custom Functions solve all of this** 
+- Write once, call everywhere. Self-documenting. Parameterized.
 
 &nbsp;
 
@@ -102,8 +101,11 @@ in
 &nbsp;
 
 ① **Parameters list** - just like any programming language
+
 ② **Return type** - optional, but recommended for documentation
+
 ③ **`let…in` block** - exactly the same as a regular query!
+
 ④ **Final expression** after `in` is the return value - no `return` keyword needed
 
 &nbsp;
@@ -128,6 +130,7 @@ Specifying a data type for a parameter turns it into an **explicit parameter**. 
 &nbsp;
 
 **Method 1 - Blank Query → Paste M code**
+
 Most flexible. Full control. Best for complex, reusable functions.
 
 ```m
@@ -136,6 +139,7 @@ Most flexible. Full control. Best for complex, reusable functions.
 ```
 
 **Method 2 - Convert an existing Query to a Function**
+
 Right-click any query → *Create Function*. Power Query wraps it automatically.
 
 Three main advantages:
@@ -144,6 +148,7 @@ Three main advantages:
 * **Visibility of the query**: The original query remains visible in your project. That means you can still inspect, modify, and run your logic as a standalone query.
 
 **Method 3 - Define inline inside another query**
+
 Define and call immediately - great for one-off local helpers.
 
 ```m
@@ -166,8 +171,6 @@ in
 *Every keyword you will use in a custom function*
 
 &nbsp;
-
----
 
 &nbsp;
 
@@ -413,7 +416,7 @@ Expression.Evaluate("Text.Upper(""hello"")", #shared)
 
 ### M Primitive Types
 
-| Type | Literal example |
+| Type | Example |
 |------|----------------|
 | `text` | `"Hello"` |
 | `number` | `42`, `3.14` |
@@ -439,7 +442,7 @@ Power Query shows a rich parameter dialog when you add `Documentation` metadata.
 
 ```m
 let
-    fnBody = (n as number, factor as optional number) as number =>
+    fnBody = (n as number, optional factor as number) as number =>
     let
         f      = factor ?? 1,
         result = n * f
@@ -454,7 +457,23 @@ let
             Documentation.FieldCaption     = "Multiplier",
             Documentation.FieldDescription = "Defaults to 1 if omitted",
             Documentation.SampleValues     = {2, 10}
-         ])) as number,
+         ])) as number
+    meta [
+        Documentation.Name            = "fnMultiply",
+        Documentation.LongDescription = "Multiplies **n** by an optional **factor** (defaults to 1).",
+        Documentation.Examples        = {
+            [
+                Description = "Multiply 10 by 3",
+                Code        = "fnMultiply(10, 3)",
+                Result      = "30"
+            ],
+            [
+                Description = "Without factor (defaults to 1)",
+                Code        = "fnMultiply(10)",
+                Result      = "10"
+            ]
+        }
+    ],
 
     documented = Value.ReplaceType(fnBody, fnType)
 in  documented
@@ -466,7 +485,7 @@ in  documented
 
 &nbsp;
 
-## 05 · Real-World Use Cases
+## 05 · Demos
 
 *Self-contained demos - paste and run*
 
@@ -586,7 +605,6 @@ in
 
 &nbsp;
 
----
 
 &nbsp;
 
@@ -727,8 +745,6 @@ Wrap your source in `Table.FirstN(Source, 100)` while building and testing.
 
 &nbsp;
 
----
-
 &nbsp;
 
 ### Method 1 - Copy & Paste the Query
@@ -760,8 +776,8 @@ Extract the raw M code and share it via email, Teams, a wiki, or a GitHub Gist.
 **Import:** New Blank Query → **Advanced Editor** → Paste → Done
 
 ```m
-// Example snippet ready to share
-(n as number, factor as optional number) as number =>
+
+(n as number, optional factor as number) as number =>
 let
     f = factor ?? 1
 in
@@ -797,7 +813,7 @@ Load them at runtime with `File.Contents` + `Expression.Evaluate`.
 **Content of `fn_TaxAmount.txt`:**
 
 ```m
-(price as number, rate as optional number) as number =>
+(price as number, optional rate as number) as number =>
 let
     r = rate ?? 0.19
 in
